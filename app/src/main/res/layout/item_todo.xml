@@ -1,0 +1,68 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Check Box -->
+    <CheckBox
+        android:id="@+id/cbCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTodoTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Todo Title"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/cbCompleted"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvTodoDuedate"
+        app:layout_constraintHorizontal_bias="0" />
+
+    <!-- Due Date -->
+    <TextView
+        android:id="@+id/tvTodoDuedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due Date"
+        app:layout_constraintStart_toEndOf="@id/tvTodoTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ibDelete"
+        app:layout_constraintBottom_toTopOf="@id/tvTodoDescription"
+        app:layout_constraintHorizontal_bias="1" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/tvTodoDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/cbCompleted"
+        app:layout_constraintTop_toBottomOf="@id/tvTodoTitle"
+        app:layout_constraintEnd_toStartOf="@id/ibDelete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0" />
+
+    <!-- Delete Button -->
+    <ImageButton
+        android:id="@+id/ibDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:contentDescription="Delete Todo"
+        android:src="@android:drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@android:color/holo_red_dark"
+        android:layout_marginStart="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
